@@ -42,6 +42,7 @@ INSTALLED_APPS = (
 		#'django.contrib.sites',
 		'polls',
 		'widget_tweaks',
+		'rest_framework',
 		#'taggit',   
 		)
 
@@ -125,5 +126,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'mail.ru'
 EMAIL_HOST_USER ='devernua@mail.ru'
 EMAIL_HOST_PASSWORD ='B,j5Ui@qH&9t]'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'PAGINATE_BY': 10
+}
 
 

@@ -17,10 +17,19 @@ Including another URLconf
 from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
+from rest_framework import routers
 
+from myapi import views
+
+router = routers.DefaultRouter()
+router.register(r'us', views.UserViewSet)
+router.register(r'qs', views.QuestionViewSet)
 #admin.autodiscover()  #функция автоматического обнаружения файлов admin.py в наших приложениях
 
 urlpatterns = [
+        url(r'^', include(router.urls)),
 		url(r'^admin/', include(admin.site.urls)),
 		url(r'^polls/', include('polls.urls', namespace="polls")),
+        url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+        #url(r'^myapi/', include('myapi.urls', namespace="myapi")),
 		]
