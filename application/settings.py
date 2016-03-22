@@ -124,8 +124,8 @@ LOGOUT_URL 			= 'polls:logout'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'mail.ru'
-EMAIL_HOST_USER ='devernua@mail.ru'
-EMAIL_HOST_PASSWORD ='B,j5Ui@qH&9t]'
+EMAIL_HOST_USER ='my@mail.ru'
+EMAIL_HOST_PASSWORD ='mypassword'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
